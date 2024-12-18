@@ -1,4 +1,3 @@
-// CartPage.tsx
 "use client";
 
 // Define CartItem type directly in CartPage.tsx
@@ -14,7 +13,7 @@ type CartPageProps = {
   proceedToCheckout: () => void;
 };
 
-export default function CartPage({ cart }: CartPageProps) {
+const CartPage = ({ cart, proceedToCheckout }: CartPageProps) => {
   const clearCart = () => {
     sessionStorage.removeItem("cart");
     window.location.reload(); // Reload to reset the cart
@@ -37,11 +36,11 @@ export default function CartPage({ cart }: CartPageProps) {
               ))}
             </ul>
             <div className="flex justify-center mt-8">
-             <a href="/Checkoutpage"><button
-                className="mr-4 py-3 px-6 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-500"
-              >
-                Proceed to Checkout
-              </button></a>
+              <a href="/Checkoutpage">
+                <button className="mr-4 py-3 px-6 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-500">
+                  Proceed to Checkout
+                </button>
+              </a>
               <button
                 onClick={clearCart}
                 className="py-3 px-6 bg-gray-600 text-white rounded-lg font-bold hover:bg-gray-500"
@@ -56,4 +55,6 @@ export default function CartPage({ cart }: CartPageProps) {
       </div>
     </section>
   );
-}
+};
+
+export default CartPage;

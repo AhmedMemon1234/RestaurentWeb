@@ -3,7 +3,6 @@ import { useState } from "react";
 import Hero from "./Hero/page";
 import MenuSection from "./Herodown/page";
 import VIPServiceSection from "./Herodown2/page";
-import CartPage from "./Cartpage/page"; // Import the CartPage component
 import TopItemsSection from "./Topitems/page"; // Import TopItemsSection
 import SpecialItems from "./SpecialItems/page";
 
@@ -34,10 +33,9 @@ export default function Home() {
       <VIPServiceSection />
       
       {/* Pass addToCart to TopItemsSection */}
-      <TopItemsSection onAddToCart={addToCart} />
+      <TopItemsSection/>
       
       {/* Pass cart and proceedToCheckout as props to CartPage */}
-      <CartPage cart={cart} proceedToCheckout={proceedToCheckout} />
       <SpecialItems/>
     </div>
   );

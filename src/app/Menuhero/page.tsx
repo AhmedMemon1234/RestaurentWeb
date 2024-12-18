@@ -1,13 +1,16 @@
-"use client"
+"use client";
+
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const HeroSectionmenu = () => {
   const [inView, setInView] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null); // Specify the type for better TypeScript support
 
   useEffect(() => {
+    const currentRef = ref.current; // Store the ref value in a variable
+
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -18,16 +21,16 @@ const HeroSectionmenu = () => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.disconnect();
+      if (currentRef) {
+        observer.unobserve(currentRef); // Use the stored ref value
       }
     };
-  }, []);
+  }, []); // No dependencies needed here since the ref and observer are internal to the effect
 
   return (
     <div className="bg-black font-[sans-serif] p-6">

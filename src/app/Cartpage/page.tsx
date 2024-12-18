@@ -14,7 +14,7 @@ type CartPageProps = {
   proceedToCheckout: () => void;
 };
 
-export default function CartPage({ cart, proceedToCheckout }: CartPageProps) {
+export default function CartPage({ cart }: CartPageProps) {
   const clearCart = () => {
     sessionStorage.removeItem("cart");
     window.location.reload(); // Reload to reset the cart

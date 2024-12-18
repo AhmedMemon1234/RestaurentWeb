@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { FaShippingFast, FaUtensils, FaHandHoldingHeart } from 'react-icons/fa'; // Importing icons
 import { motion } from 'framer-motion'; // Importing framer-motion for scroll animations

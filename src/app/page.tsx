@@ -1,5 +1,4 @@
-// Home.tsx
-"use client"
+"use client";
 import { useState } from "react";
 import Hero from "./Hero/page";
 import MenuSection from "./Herodown/page";
@@ -17,7 +16,6 @@ export type CartItem = {
 
 export default function Home() {
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [isCheckout, setIsCheckout] = useState(false); // Track if we're in the checkout phase
 
   const addToCart = (item: CartItem) => {
     setCart((prevCart) => [...prevCart, item]);
@@ -25,7 +23,8 @@ export default function Home() {
   };
 
   const proceedToCheckout = () => {
-    setIsCheckout(true); // Trigger the checkout page
+    // Remove isCheckout state if not needed
+    // setIsCheckout(true); // Not needed if we are not using this state
   };
 
   return (

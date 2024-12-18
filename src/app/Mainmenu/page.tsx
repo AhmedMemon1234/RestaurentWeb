@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -34,28 +34,16 @@ const MenuPage = () => {
     phone: ''
   });
   const [orderPlaced, setOrderPlaced] = useState<boolean>(false);
-  const [orderMessage, setOrderMessage] = useState<string>('');
-  const [showFullScreenMessage, setShowFullScreenMessage] = useState<boolean>(false); // New state for full-screen message
+  const [orderMessage, setOrderMessage] = useState<string>(''); // State for order message
+  const [showFullScreenMessage, setShowFullScreenMessage] = useState<boolean>(false); // State for full-screen message
 
- const [menuItems] = useState<MenuItem[]>([
-      { id: 1, name: 'Spicy Chicken Roll', description: 'A fiery, spicy blend of tender chicken, perfectly seasoned with exotic spices, wrapped in a soft roll. Served with a tangy dipping sauce to elevate your taste buds.', price: '$12.99', image: '/food1.jpg' },
-      { id: 2, name: 'Veggie Tacos', description: 'Crispy taco shells filled with a delightful mix of fresh vegetables, tangy salsa, and a drizzle of creamy zesty sauce. A perfect treat for veggie lovers.', price: '$8.99', image: '/food2.jpg' },
-      { id: 3, name: 'Grilled Salmon', description: 'Freshly grilled salmon fillet infused with a smoky aroma, served with a side of herbed butter and lemon wedges for a burst of freshness and delicious spicy.', price: '$18.99', image: '/food3.jpg' },
-      { id: 4, name: 'Beef Burrito', description: 'A hearty burrito packed with tender beef, seasoned rice, fresh veggies, and a blend of flavorful spices, wrapped in a soft tortilla.', price: '$14.99', image: '/food4.jpg' },
-      { id: 5, name: 'Spicy Fried Rice', description: 'A spicy and savory fried rice dish loaded with fresh vegetables, tender protein options, and an aromatic blend of Asian spices.', price: '$10.99', image: '/food5.jpg' },
-      { id: 6, name: 'Patty Burger', description: 'A classic patty burger layered with a juicy beef patty, fresh lettuce, tomatoes, onions, and your choice of sauces. Served in a soft bun.', price: '$9.99', image: '/food6.jpg' },
-      { id: 7, name: 'BBQ Ribs', description: 'Juicy, tender ribs marinated in a smoky barbecue sauce and grilled to perfection. Served with a side of creamy coleslaw.', price: '$16.99', image: '/food7.jpg' },
-      { id: 8, name: 'Vegetable Stir-fry', description: 'A colorful medley of fresh vegetables stir-fried in a savory garlic-soy sauce, perfect for a light and healthy meal.', price: '$11.99', image: '/food8.jpg' },
-      { id: 9, name: 'Chicken Caesar', description: 'Crispy romaine lettuce topped with juicy grilled chicken, crunchy croutons, and parmesan cheese. Tossed in a creamy Caesar dressing.', price: '$13.99', image: '/food9.jpg' },
-      { id: 10, name: 'Shrimp Tacos', description: 'Succulent shrimp seasoned and grilled to perfection, wrapped in soft tacos with fresh slaw, avocado, and a tangy lime sauce.', price: '$14.49', image: '/food10.jpg' },
-      { id: 11, name: 'Mushroom Risotto', description: 'A creamy Italian risotto cooked with earthy mushrooms, garlic, white wine, and a generous sprinkle of parmesan cheese.', price: '$15.99', image: '/food11.jpg' },
-      { id: 12, name: 'Noodles', description: 'Savory noodles cooked with juicy beef, fresh vegetables, and a rich soy-based sauce for a satisfying, flavorful experience.', price: '$11.49', image: '/food12.jpg' },
-      { id: 13, name: 'Spicy Pizza', description: 'A pizza with a spicy twist! Topped with grilled chicken, fiery peppers, melted mozzarella, and a hint of parmesan.', price: '$17.99', image: '/food13.jpg' },
-      { id: 14, name: 'Grilled Veggie Wrap', description: 'A healthy wrap loaded with grilled zucchini, bell peppers, eggplant, and a light yogurt dressing for a refreshing bite.', price: '$9.49', image: '/food14.jpg' },
-      { id: 15, name: 'Steak Frites', description: 'A tender, juicy steak served alongside golden, crispy fries and a rich, savory sauce for an indulgent dining experience.', price: '$21.99', image: '/food15.jpg' },
-      { id: 16, name: 'Fish and Chips', description: 'Crispy golden-battered fish served with a side of thick-cut fries, tartar sauce, and a wedge of lemon.', price: '$13.49', image: '/food16.jpg' },
-      { id: 17, name: 'Veggie Chinese Roll', description: 'A crispy roll filled with fresh mozzarella, juicy tomatoes, and fragrant basil, delivering a perfect balance of flavor and texture.', price: '$14.99', image: '/food17.jpg' },
-      { id: 18, name: 'Fish Burger', description: 'A crispy, breaded fish fillet served in a soft bun with lettuce, tartar sauce, and a side of dipping sauce for a delightful bite.', price: '$10.49', image: '/food18.jpg' },    
+  const [menuItems] = useState<MenuItem[]>([
+    { id: 1, name: 'Spicy Chicken Roll', description: 'A fiery, spicy blend of tender chicken, perfectly seasoned with exotic spices, wrapped in a soft roll. Served with a tangy dipping sauce to elevate your taste buds.', price: '$12.99', image: '/food1.jpg' },
+    { id: 2, name: 'Veggie Tacos', description: 'Crispy taco shells filled with a delightful mix of fresh vegetables, tangy salsa, and a drizzle of creamy zesty sauce. A perfect treat for veggie lovers.', price: '$8.99', image: '/food2.jpg' },
+    { id: 3, name: 'Grilled Salmon', description: 'Freshly grilled salmon fillet infused with a smoky aroma, served with a side of herbed butter and lemon wedges for a burst of freshness and delicious spicy.', price: '$18.99', image: '/food3.jpg' },
+    { id: 4, name: 'Beef Burrito', description: 'A hearty burrito packed with tender beef, seasoned rice, fresh veggies, and a blend of flavorful spices, wrapped in a soft tortilla.', price: '$14.99', image: '/food4.jpg' },
+    { id: 5, name: 'Spicy Fried Rice', description: 'A spicy and savory fried rice dish loaded with fresh vegetables, tender protein options, and an aromatic blend of Asian spices.', price: '$10.99', image: '/food5.jpg' },
+    { id: 6, name: 'Patty Burger', description: 'A classic patty burger layered with a juicy beef patty, fresh lettuce, tomatoes, onions, and your choice of sauces. Served in a soft bun.', price: '$9.99', image: '/food6.jpg' },
   ]);
 
   const addToCart = (item: MenuItem) => {
@@ -182,6 +170,12 @@ const MenuPage = () => {
         >
           <h3 className="text-2xl font-extrabold text-orange-500 mb-6">Checkout</h3>
           <div className="bg-gray-800 p-6 rounded-lg">
+            {/* Display Order Message */}
+            {orderMessage && (
+              <div className="bg-red-500 text-white text-center p-2 rounded-md mb-4">
+                {orderMessage}
+              </div>
+            )}
             <form>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-white">Name</label>
@@ -252,7 +246,6 @@ const MenuPage = () => {
             </motion.div>
           </motion.div>
         )}
-         
       </div>
     </section>
   );

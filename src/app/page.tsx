@@ -1,31 +1,11 @@
 "use client";
-import { useState } from "react";
 import Hero from "./Hero/page";
 import MenuSection from "./Herodown/page";
 import VIPServiceSection from "./Herodown2/page";
 import TopItemsSection from "./Topitems/page"; // Import TopItemsSection
 import SpecialItems from "./SpecialItems/page";
 
-export type CartItem = {
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-};
-
 export default function Home() {
-  const [cart, setCart] = useState<CartItem[]>([]);
-
-  const addToCart = (item: CartItem) => {
-    setCart((prevCart) => [...prevCart, item]);
-    sessionStorage.setItem("cart", JSON.stringify([...cart, item]));
-  };
-
-  const proceedToCheckout = () => {
-    // Remove isCheckout state if not needed
-    // setIsCheckout(true); // Not needed if we are not using this state
-  };
-
   return (
     <div>
       <Hero />

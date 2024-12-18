@@ -8,11 +8,12 @@ type CartItem = {
   image: string;
 };
 
-type CartPageProps = {
+interface CartPageProps {
   cart: CartItem[];
-  proceedToCheckout: () => void; // Function to handle checkout
-};
+  proceedToCheckout: () => void;
+}
 
+// Define the CartPage component and export it as default
 const CartPage = ({ cart, proceedToCheckout }: CartPageProps) => {
   const clearCart = () => {
     sessionStorage.removeItem("cart");

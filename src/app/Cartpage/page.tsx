@@ -10,7 +10,7 @@ type CartItem = {
 
 type CartPageProps = {
   cart: CartItem[];
-  proceedToCheckout: () => void;
+  proceedToCheckout: () => void; // Function to handle checkout
 };
 
 const CartPage = ({ cart, proceedToCheckout }: CartPageProps) => {
@@ -36,11 +36,13 @@ const CartPage = ({ cart, proceedToCheckout }: CartPageProps) => {
               ))}
             </ul>
             <div className="flex justify-center mt-8">
-              <a href="/Checkoutpage">
-                <button className="mr-4 py-3 px-6 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-500">
-                  Proceed to Checkout
-                </button>
-              </a>
+              {/* Trigger proceedToCheckout when button is clicked */}
+              <button
+                onClick={proceedToCheckout} // Now using proceedToCheckout here
+                className="mr-4 py-3 px-6 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-500"
+              >
+                Proceed to Checkout
+              </button>
               <button
                 onClick={clearCart}
                 className="py-3 px-6 bg-gray-600 text-white rounded-lg font-bold hover:bg-gray-500"

@@ -42,10 +42,10 @@ const Header = () => {
       {/* Mobile Menu (Visible only when menuOpen is true) */}
       {menuOpen && (
         <div className="md:hidden bg-black text-white p-4 space-y-4">
-          <a href="#home" className="block hover:text-orange-500">Home</a>
-          <a href="#menu" className="block hover:text-orange-500">Menu</a>
-          <a href="#about" className="block hover:text-orange-500">About</a>
-          <a href="#contact" className="block hover:text-orange-500">Contact</a>
+          <a href="/home" className="block hover:text-orange-500">Home</a>
+          <a href="/menu" className="block hover:text-orange-500">Menu</a>
+          <a href="/Abouthome" className="block hover:text-orange-500">About</a>
+          <a href="/Contactmain" className="block hover:text-orange-500">Contact</a>
         </div>
       )}
     </header>

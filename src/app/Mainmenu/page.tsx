@@ -41,11 +41,24 @@ const MenuPage = () => {
     { id: 1, name: 'Spicy Chicken Roll', description: 'A fiery, spicy blend of tender chicken, perfectly seasoned with exotic spices, wrapped in a soft roll. Served with a tangy dipping sauce to elevate your taste buds.', price: '$12.99', image: '/food1.jpg' },
     { id: 2, name: 'Veggie Tacos', description: 'Crispy taco shells filled with a delightful mix of fresh vegetables, tangy salsa, and a drizzle of creamy zesty sauce. A perfect treat for veggie lovers.', price: '$8.99', image: '/food2.jpg' },
     { id: 3, name: 'Grilled Salmon', description: 'Freshly grilled salmon fillet infused with a smoky aroma, served with a side of herbed butter and lemon wedges for a burst of freshness and delicious spicy.', price: '$18.99', image: '/food3.jpg' },
-    { id: 4, name: 'Beef Burrito', description: 'A hearty burrito packed with tender beef, seasoned rice, fresh veggies, and a blend of flavorful spices, wrapped in a soft tortilla.', price: '$14.99', image: '/food4.jpg' },
-    { id: 5, name: 'Spicy Fried Rice', description: 'A spicy and savory fried rice dish loaded with fresh vegetables, tender protein options, and an aromatic blend of Asian spices.', price: '$10.99', image: '/food5.jpg' },
-    { id: 6, name: 'Patty Burger', description: 'A classic patty burger layered with a juicy beef patty, fresh lettuce, tomatoes, onions, and your choice of sauces. Served in a soft bun.', price: '$9.99', image: '/food6.jpg' },
+    { id: 4, name: 'Beef Burrito', description: 'A hearty burrito packed with tender beef, seasoned rice, fresh veggies, and a blend of flavorful spices, wrapped in a soft tortilla. Served with a side of salsa and guacamole.', price: '$14.99', image: '/food4.jpg' },
+    { id: 5, name: 'Spicy Fried Rice', description: 'A spicy and savory fried rice dish loaded with fresh vegetables, tender protein options, and an aromatic blend of Asian spices. Garnished with green onions and sesame seeds for the perfect finish.', price: '$10.99', image: '/food5.jpg' },
+    { id: 6, name: 'Patty Burger', description: 'A classic patty burger layered with a juicy beef patty, fresh lettuce, tomatoes, onions, and your choice of sauces. Served in a soft bun with crispy fries on the side.', price: '$9.99', image: '/food6.jpg' },
+    { id: 7, name: 'Garlic Butter Shrimp', description: 'Succulent shrimp sautéed in a rich garlic butter sauce, perfectly seasoned with fresh herbs. Served with a side of freshly baked artisan bread to soak up all the flavors.', price: '$15.99', image: '/food7.jpg' },
+    { id: 8, name: 'Caesar Salad', description: 'Crisp romaine lettuce tossed in a creamy Caesar dressing, topped with grated parmesan cheese, crunchy croutons, and a hint of black pepper. Add grilled chicken or shrimp for extra protein.', price: '$7.99', image: '/food8.jpg' },
+    { id: 9, name: 'Stuffed Bell Peppers', description: 'Vibrant bell peppers filled with a flavorful mix of seasoned rice, fresh vegetables, and aromatic herbs. Baked to perfection and served with a side of tangy tomato sauce.', price: '$11.99', image: '/food9.jpg' },
+    { id: 10, name: 'BBQ Ribs', description: 'Juicy and tender pork ribs, slow-cooked and coated with a smoky and tangy BBQ sauce. Served with creamy coleslaw and a side of crispy fries for the ultimate BBQ experience.', price: '$19.99', image: '/food10.jpg' },
+    { id: 11, name: 'Chicken Pieces', description: 'An indulgent spicy featuring a warm spicy chicken center, surrounded by moist chicken pieces. Served with a chicken pieces with chutney special served spicy.', price: '$6.99', image: '/food11.jpg' },
+    { id: 12, name: 'Margherita Noodles', description: 'A timeless classic with a crispy crust, tangy tomato sauce, fresh mozzarella, and fragrant basil leaves. Perfectly baked to achieve the ideal balance of flavor and texture.', price: '$13.99', image: '/food12.jpg' },
+    { id: 13, name: 'Fish Tacos', description: 'Deliciously grilled fish served in soft tortillas, topped with a refreshing slaw, creamy lime sauce, and a sprinkle of fresh cilantro. A delightful fusion of flavors in every bite.', price: '$10.99', image: '/food13.jpg' },
+    { id: 14, name: 'Pasta Carbonara', description: 'A rich and creamy Italian pasta dish made with pancetta, eggs, parmesan cheese, and freshly cracked black pepper. Tossed with al dente pasta for a comforting and hearty meal.', price: '$12.99', image: '/food14.jpg' },
+    { id: 15, name: 'Buffalo Roll', description: 'Crispy beef roll coated in a fiery buffalo sauce, served with a side of cool ranch or blue cheese dressing. A must-have for spice lovers spicy cruncy roll with chutney', price: '$9.99', image: '/food15.jpg' },
+    { id: 16, name: 'Avocado Toast', description: 'A healthy and delicious option featuring toasted sourdough bread topped with creamy avocado, cherry tomatoes, crumbled feta cheese, and a drizzle of balsamic glaze.', price: '$8.99', image: '/food16.jpg' },
+    { id: 17, name: 'Veggie Roll', description: 'A smooth and creamy Veggie Roll with a buttery graham cracker crust, served with a generous topping of fresh berry compote for a perfect balance of sweetness and tang.', price: '$6.99', image: '/food17.jpg' },
+    { id: 18, name: 'Chicken Burger', description: 'A classic Italian dish featuring tender fettuccine chicken tossed in a creamy Chicken Burger sauce and topped with perfectly grilled chicken breast. Garnished with parsley and parmesan.', price: '$13.99', image: '/food18.jpg' },
   ]);
-
+  
+  
   const addToCart = (item: MenuItem) => {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
